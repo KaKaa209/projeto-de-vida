@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
 
 :root {
-
     --cor-de-fundo: #050505;
-
     --verde: #00ff88;
     --branco: #ffffff;
 
@@ -11,32 +9,27 @@
     --botao-inativo: #1a1a1a;
 
     --texto-fundo: #101010;
-
     --borda: #2b2b2b;
 }
 
 body {
     background: linear-gradient(180deg, #050505, #111111);
     color: var(--branco);
-
     font-family: 'Orbitron', sans-serif;
-
     margin: 0;
     min-height: 100vh;
 }
 
-/* CONTEÚDO PRINCIPAL */
+/* CONTEÚDO */
 
 .conteudo-principal {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
 
     max-width: 1200px;
     width: 90%;
-
     margin: 40px auto;
 }
 
@@ -44,13 +37,9 @@ body {
 
 .titulo-principal {
     text-align: center;
-
     width: 100%;
-
     font-size: 38px;
-
     margin-bottom: 40px;
-
     text-shadow: 0 0 12px var(--verde);
 }
 
@@ -65,69 +54,55 @@ body {
 }
 
 .botao {
-    font-family: "Orbitron", sans-serif;
+    font-family: 'Orbitron', sans-serif;
 
     background-color: var(--botao-inativo);
     color: var(--branco);
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
     width: 100%;
-
     padding: 18px;
 
     font-size: 14px;
 
     border: 2px solid var(--borda);
-
     cursor: pointer;
 
-    transition: 0.3s ease;
+    transition: all .3s ease;
 }
-
-/* BORDAS DOS BOTÕES */
 
 .botao:first-child {
     border-radius: 20px 20px 0 0;
 }
 
-/* HOVER */
-
 .botao:hover {
-
     transform: scale(1.02);
 
     border-color: var(--verde);
 
     box-shadow:
-        0 0 10px rgba(0, 255, 136, 0.5),
-        0 0 20px rgba(0, 255, 136, 0.3);
+        0 0 10px rgba(0,255,136,.5),
+        0 0 20px rgba(0,255,136,.3);
 }
 
-/* BOTÃO ATIVO */
-
 .botao.ativo {
-
     background-color: var(--botao-ativo);
-
     color: #000;
-
     font-weight: 700;
 
     border-color: var(--verde);
 
     box-shadow:
         0 0 10px var(--verde),
-        0 0 20px rgba(0, 255, 136, 0.6);
+        0 0 20px rgba(0,255,136,.6);
 }
 
-/* ÁREA DOS TEXTOS */
+/* CONTEÚDO DAS ABAS */
 
 .abas-textos {
-
     background-color: var(--texto-fundo);
 
     padding: 40px;
@@ -137,11 +112,8 @@ body {
     border: 2px solid var(--borda);
 
     box-shadow:
-        0 0 20px rgba(0,0,0,0.6);
-
+        0 0 20px rgba(0,0,0,.6);
 }
-
-/* ABAS */
 
 .aba-conteudo {
     display: none;
@@ -151,38 +123,69 @@ body {
     display: block;
 }
 
-/* TÍTULOS */
+/* TÍTULOS DAS ABAS */
 
 .aba-conteudo-titulo-principal {
-
     font-size: 28px;
-
     text-align: center;
-
     margin-bottom: 20px;
 
-    text-shadow: 0 0 8px rgba(0,255,136,0.4);
+    text-shadow: 0 0 8px rgba(0,255,136,.4);
 }
 
 .aba-conteudo-titulo-secundario {
-
     text-align: center;
-
     color: var(--verde);
 
     text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* CONTADOR */
+
+.contador {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contador-digito {
+    min-width: 120px;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.contador-digito-numero {
+    font-size: 72px;
+    margin: 0;
+
+    color: var(--verde);
+
+    text-shadow:
+        0 0 10px var(--verde),
+        0 0 20px rgba(0,255,136,.5);
+}
+
+.contador-digito-texto {
+    color: var(--branco);
 
     font-size: 14px;
 
+    text-transform: uppercase;
+
     letter-spacing: 2px;
+
+    margin-top: 5px;
 }
 
 /* RESPONSIVO */
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
 
-    .botoes{
-        display:flex;
+    .botoes {
+        display: flex;
         gap: 10px;
     }
 
